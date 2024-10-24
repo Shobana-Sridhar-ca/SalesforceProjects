@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Iterator loop in LWC">
+        <table class="slds-table slds-table_bordered">
+            <thead>
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Age</td>
+                    <td>City</td>
+                </tr>
+            </thead>
+
+            <template iterator:emp={employeeList}>
+                <tr key={emp.value.id}>
+                    <td>{emp.value.fName}</td>
+                    <td>{emp.value.lName}</td>
+                    <td>{emp.value.Age}</td>
+                    <td>{emp.value.City}</td>
+                </tr>
+            </template>
+        </table>
+    </lightning-card>
+</template>
