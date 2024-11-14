@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Apex Wire Method to Property">
+        <template if:true={contacts.data}>
+            <template for:each={contacts.data} for:item="con">
+                <div key={con.id}>
+                    <div> Name: {con.Name}</div>
+                </div>
+            </template>
+            <template if:true={contacts.error}>
+                {contacts.error}
+            </template>
+        </template>
+    </lightning-card>
+</template>
